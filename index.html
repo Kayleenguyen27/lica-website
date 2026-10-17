@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LICA Garment Solutions — Your Complete Garment Partner</title>
+<meta name="description" content="LICA Garment Solutions is a Vietnam-based OEM and ODM garment and textile manufacturing partner, powered by 13+ years of retail experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f2d57; --navy2:#17407a; --blue:#1f5fb5; --ink:#0b2342;
+  --orange:#f28c28; --orange2:#ffb066; --cream:#f7f3ec; --paper:#fbf9f5; --mist:#eaf0f9;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.disp{font-family:'Anton','Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.015em;text-transform:uppercase;line-height:1.02}
+.weave{background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(0,0,0,.06) 0 1px,transparent 1px 4px)}
+.weave-l{background-image:repeating-linear-gradient(0deg,rgba(15,45,87,.035) 0 1px,transparent 1px 4px),repeating-linear-gradient(90deg,rgba(15,45,87,.035) 0 1px,transparent 1px 4px)}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+section{position:relative;padding:110px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--orange)}
+.eyebrow::before{content:"";width:46px;height:2px;background:repeating-linear-gradient(90deg,var(--orange) 0 6px,transparent 6px 10px)}
+h2{font-size:clamp(2.4rem,6vw,4.6rem);color:var(--navy);margin:14px 0 18px}
+h2 em{font-style:normal;color:var(--orange)}
+.sub{font-weight:700;color:var(--blue);font-size:1.05rem;letter-spacing:.02em}
+.lead{font-size:1.08rem;color:#324a6b;max-width:62ch}
+.light h2{color:#fff}.light .lead,.light p{color:#dbe7f8}.light .sub{color:var(--orange2)}
+
+/* progress thread */
+#thread{position:fixed;top:0;left:0;height:4px;width:0;z-index:100;background:repeating-linear-gradient(90deg,var(--orange) 0 10px,var(--orange2) 10px 14px,transparent 14px 18px);filter:drop-shadow(0 0 6px rgba(242,140,40,.7))}
+#thread::after{content:"";position:absolute;right:-14px;top:-6px;width:28px;height:16px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 16'%3E%3Cpath d='M1 8h20' stroke='%23f28c28' stroke-width='2'/%3E%3Cpath d='M27 8L19 3v10z' fill='%23fff'/%3E%3Ccircle cx='21' cy='8' r='1.6' fill='%230f2d57'/%3E%3C/svg%3E")}
+#glow{position:fixed;left:0;top:0;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(242,140,40,.16),rgba(31,95,181,.08) 45%,transparent 70%);transition:opacity .4s;mix-blend-mode:multiply}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:90;padding:14px 0;transition:.5s var(--ease)}
+nav.stuck{background:rgba(15,45,87,.82);backdrop-filter:blur(14px) saturate(1.3);padding:8px 0;box-shadow:0 10px 40px rgba(5,20,45,.25)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+nav img{height:46px;width:auto}
+nav ul{display:flex;gap:26px;list-style:none}
+nav li a{color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;position:relative;padding:6px 0;opacity:.88}
+nav li a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:.45s var(--ease)}
+nav li a:hover{opacity:1}nav li a:hover::after,nav li a.on::after{transform:scaleX(1)}
+.burger{display:none;background:none;border:0;width:36px;height:30px;position:relative;cursor:pointer}
+.burger i{position:absolute;left:4px;right:4px;height:2px;background:#fff;border-radius:2px;transition:.4s var(--ease)}
+.burger i:nth-child(1){top:8px}.burger i:nth-child(2){top:15px}.burger i:nth-child(3){top:22px}
+.burger.x i:nth-child(1){top:15px;transform:rotate(45deg)}.burger.x i:nth-child(2){opacity:0}.burger.x i:nth-child(3){top:15px;transform:rotate(-45deg)}
+
+/* hero */
+#hero{min-height:100vh;padding:0;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(160deg,#0a2347,#143f7a 55%,#0d2a52);overflow:hidden;isolation:isolate}
+#hero .bg{position:absolute;inset:-6%;z-index:-3;background:url(img/cover-ship-aerial.jpg) center/cover;opacity:.34;mix-blend-mode:luminosity;will-change:transform}
+#hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+#hero .veil{position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 45%,transparent 25%,rgba(6,22,48,.7) 100%)}
+.thr{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.thr path{fill:none;stroke:rgba(255,176,102,.55);stroke-width:1.6;stroke-dasharray:6 10;animation:dash 22s linear infinite}
+.thr path:nth-child(2){stroke:rgba(255,255,255,.25);animation-duration:34s;animation-direction:reverse}
+@keyframes dash{to{stroke-dashoffset:-600}}
+.hero-in{padding:120px 0 90px}
+.hero-in img.logo{width:min(440px,70vw);margin:0 auto 34px;filter:drop-shadow(0 12px 30px rgba(0,0,0,.4));animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.tag{display:inline-block;padding:7px 18px;border:1px solid rgba(255,255,255,.35);border-radius:99px;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600;backdrop-filter:blur(6px);background:rgba(255,255,255,.07);margin-bottom:22px}
+#hero h1{font-size:clamp(3.4rem,11.5vw,9.4rem);text-shadow:0 14px 50px rgba(0,0,0,.4)}
+#hero h1 span{display:inline-block;background:linear-gradient(180deg,#fff 30%,#cfe1ff);-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise 1.4s var(--ease) both}
+#hero h1 span:nth-child(2){animation-delay:.18s}
+@keyframes rise{from{opacity:0;transform:translateY(60px) scale(.96);filter:blur(10px)}}
+#hero p.mot{font-style:italic;font-weight:600;font-size:clamp(1.05rem,2.4vw,1.7rem);letter-spacing:.08em;text-transform:uppercase;margin-top:12px;animation:rise 1.4s .4s var(--ease) both}
+.cta{display:inline-flex;align-items:center;gap:12px;margin-top:38px;padding:15px 30px;border-radius:99px;background:linear-gradient(120deg,var(--orange),#ff9f45);color:#fff;font-weight:700;letter-spacing:.12em;font-size:.8rem;text-transform:uppercase;box-shadow:0 14px 40px rgba(242,140,40,.45);transition:.5s var(--ease);animation:rise 1.4s .6s var(--ease) both}
+.cta:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 22px 50px rgba(242,140,40,.6)}
+.scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:26px;height:44px;border:2px solid rgba(255,255,255,.6);border-radius:20px}
+.scroll::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:4px;background:#fff;animation:sc 1.8s infinite}
+@keyframes sc{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(16px)}}
+.swatch{position:absolute;z-index:-1;border-radius:20px;opacity:.55;filter:blur(.3px);box-shadow:0 20px 50px rgba(0,0,0,.3);animation:sw 14s ease-in-out infinite}
+.swatch::after{content:"";position:absolute;inset:0;border-radius:inherit;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.18) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.14) 0 2px,transparent 2px 6px);mix-blend-mode:overlay}
+@keyframes sw{50%{transform:translateY(-26px) rotate(var(--r2,8deg))}}
+
+/* marquee */
+.marq{background:var(--navy);color:#fff;overflow:hidden;padding:18px 0;border-block:3px dashed rgba(242,140,40,.7)}
+.marq div{display:flex;gap:46px;width:max-content;animation:mq 38s linear infinite;font-family:Anton;text-transform:uppercase;letter-spacing:.08em;font-size:1.5rem;white-space:nowrap}
+.marq b{color:var(--orange);font-weight:400}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);filter:blur(7px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease),filter 1.1s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none;filter:none}
+.fold{clip-path:inset(0 0 94% 0 round 26px);transform:scale(1.06);transition:clip-path 1.5s var(--ease),transform 1.8s var(--ease);transition-delay:var(--d,0s);border-radius:26px;overflow:hidden}
+.fold.in{clip-path:inset(0 0 0 0 round 26px);transform:none}
+.fold img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.fold:hover img{transform:scale(1.07)}
+.ph{position:relative;box-shadow:0 30px 70px -20px rgba(10,35,71,.45);cursor:zoom-in}
+.ph::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);pointer-events:none}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 18px;color:#fff;font-size:.85rem;font-weight:500;background:linear-gradient(transparent,rgba(8,26,56,.88))}
+.tilt{transform-style:preserve-3d;transition:transform .35s var(--ease),box-shadow .5s}
+
+/* about */
+#about{background:linear-gradient(180deg,var(--paper),var(--cream))}
+.about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.about-grid .stats{display:grid;gap:18px}
+.stat{display:flex;align-items:center;gap:22px;padding:24px 30px;border-radius:26px;color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy2));box-shadow:14px 14px 0 rgba(15,45,87,.12),0 30px 60px -20px rgba(15,45,87,.5);position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 0,rgba(242,140,40,.3),transparent 55%)}
+.stat .n{font-family:Anton;font-size:clamp(3rem,6vw,4.4rem);line-height:1;position:relative;min-width:2.6ch}
+.stat .n sup{color:var(--orange);font-size:.6em}
+.stat b{display:block;font-family:Anton;font-weight:400;letter-spacing:.06em;font-size:1.3rem;position:relative}
+.stat span{opacity:.85;font-size:.95rem;position:relative}
+.intro{font-size:1.25rem;font-weight:500;margin-bottom:22px;color:var(--navy)}
+.intro em{font-weight:700;color:var(--blue)}
+.about-copy p{margin-bottom:20px;color:#324a6b;padding-left:24px;position:relative}
+.about-copy p::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:12px;background:var(--orange);border-radius:3px;transform:rotate(45deg)}
+.about-copy strong{color:var(--navy)}
+
+/* toc */
+#toc{padding:0;background:var(--navy);color:#fff}
+.toc-grid{display:grid;grid-template-columns:1fr 1.1fr;min-height:560px}
+.toc-img{position:relative;overflow:hidden}
+.toc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(1.1)}
+.toc-img h2{position:absolute;left:8%;bottom:12%;font-size:clamp(3.4rem,8vw,6.6rem);line-height:.92;color:#fff;margin:0}
+.toc-img h2 em{display:block}
+.toc-list{padding:70px 7%;display:flex;flex-direction:column;justify-content:center}
+.toc-list a{display:flex;align-items:baseline;gap:26px;padding:20px 0;border-bottom:2px solid rgba(255,255,255,.18);position:relative;overflow:hidden;transition:.5s var(--ease)}
+.toc-list a::before{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:.6s var(--ease)}
+.toc-list a:hover::before{transform:scaleX(1)}
+.toc-list a:hover{padding-left:14px}
+.toc-list i{font-style:normal;font-family:Anton;font-size:2.6rem;color:#4e8ae0;min-width:2ch}
+.toc-list span{margin-left:auto;font-weight:800;letter-spacing:.06em;font-size:1.05rem;text-transform:uppercase}
+
+/* story */
+#story{background:var(--cream)}
+.story-top{text-align:center;max-width:860px;margin:0 auto 50px}
+.story-top .big{font-size:clamp(1.15rem,2.4vw,1.6rem);font-weight:500;color:var(--navy)}
+.story-top .big b{color:var(--blue)}
+.story-top h3{font-size:clamp(2rem,5vw,3.6rem);color:var(--blue);margin-top:12px}
+.story-top h3 em{font-style:normal;color:var(--orange)}
+.map-wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:50px;align-items:center}
+.map-card{position:relative;padding:24px;border-radius:32px;background:#fff;box-shadow:0 40px 80px -30px rgba(15,45,87,.35)}
+.map-card img{width:100%;filter:drop-shadow(0 10px 20px rgba(15,45,87,.12))}
+.pulse{position:absolute;width:16px;height:16px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(242,140,40,.7);animation:pl 2.4s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 22px rgba(242,140,40,0)}100%{box-shadow:0 0 0 0 rgba(242,140,40,0)}}
+.story-copy p{font-size:1.1rem;color:#324a6b}.story-copy strong{color:var(--navy)}
+.cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.cities span{padding:8px 16px;border-radius:99px;background:#fff;border:1.5px dashed var(--orange);font-size:.82rem;font-weight:700;color:var(--navy);transition:.4s var(--ease)}
+.cities span:hover{background:var(--orange);color:#fff;transform:translateY(-3px)}
+.found{display:grid;grid-template-columns:.9fr 1.3fr;gap:50px;margin-top:100px;align-items:start}
+.found h2{margin-top:0}
+.found .plain{font-size:1.15rem;color:#324a6b}.found .plain strong{color:var(--navy)}
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:16px}
+.mosaic .m{position:relative}
+.mosaic .m:nth-child(1){grid-column:span 3;grid-row:span 2}
+.mosaic .m:nth-child(2){grid-column:span 3;grid-row:span 2}
+.mosaic .m:nth-child(3){grid-column:span 3;grid-row:span 2}
+.mosaic .m:nth-child(4){grid-column:span 3;grid-row:span 2}
+.mosaic .m .cap{font-size:.8rem}
+
+/* ceo */
+#ceo{background:linear-gradient(110deg,var(--navy) 0 36%,var(--paper) 36%);padding:100px 0}
+.ceo-grid{display:grid;grid-template-columns:.8fr 1.3fr;gap:70px;align-items:center}
+.ceo-photo{border-radius:34px;padding:10px;background:#fff;box-shadow:0 40px 80px -20px rgba(0,0,0,.5);transform:rotate(-2deg);transition:.8s var(--ease)}
+.ceo-photo:hover{transform:rotate(0) scale(1.02)}
+.ceo-photo img{border-radius:26px;width:100%}
+.letter p{margin-bottom:18px;color:#2c4467;text-align:justify}
+.letter .hl{font-family:Anton;text-transform:uppercase;font-size:1.25rem;color:var(--blue);letter-spacing:.03em;margin-bottom:18px;text-align:left}
+.letter b{color:var(--navy)}
+.sign{font-family:'Great Vibes',cursive;font-size:3rem;color:var(--navy);line-height:1;margin-top:26px}
+.sign-t{font-weight:800;color:var(--navy)}
+
+/* network */
+#network{background:var(--paper)}
+.net-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.net-lead{padding:34px 36px;border-radius:30px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;font-size:1.1rem;text-align:center;box-shadow:0 30px 60px -20px rgba(15,45,87,.55)}
+.pillars{display:grid;gap:14px;margin-top:22px}
+.pillar{display:flex;align-items:center;gap:18px;padding:16px 22px;border-radius:20px;background:#fff;box-shadow:0 12px 30px -12px rgba(15,45,87,.25);transition:.5s var(--ease);position:relative;overflow:hidden}
+.pillar:hover{transform:translateX(10px)}
+.pillar .ic{flex:none;width:52px;height:52px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.pillar .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.pillar p{font-size:.95rem;color:#3b5273;flex:1}.pillar p b{color:var(--navy)}
+.pillar .no{font-family:Anton;font-size:1.4rem;color:#fff;padding:10px 22px 10px 30px;margin:-16px -22px -16px 0;clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);background:linear-gradient(120deg,var(--orange),#ffb347)}
+.pillar:nth-child(even) .no{background:linear-gradient(120deg,var(--blue),#4d8be0)}
+.net-txt p{font-size:1.1rem;color:#324a6b;margin-bottom:18px}
+.net-txt .crit{padding:22px 26px;border-left:5px solid var(--orange);background:#fff;border-radius:0 22px 22px 0;box-shadow:0 14px 34px -16px rgba(15,45,87,.3);color:#2c4467;font-size:1.02rem}
+.net-txt .crit b{color:var(--blue)}
+
+/* certs */
+#cert{color:#fff;overflow:hidden;isolation:isolate}
+#cert .bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(rgba(10,35,71,.78),rgba(10,35,71,.92)),url(img/cert-bg-qc.jpg) center/cover fixed}
+#cert .box{margin-top:44px;background:#fff;border-radius:30px;padding:30px;box-shadow:0 40px 90px -20px rgba(0,0,0,.6)}
+#cert .box img{width:100%;border-radius:12px}
+.ctags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;justify-content:center}
+.ctags span{padding:9px 18px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);font-size:.82rem;font-weight:600;letter-spacing:.04em;backdrop-filter:blur(6px);transition:.4s var(--ease)}
+.ctags span:hover{background:var(--orange);border-color:var(--orange);transform:translateY(-4px)}
+
+/* products */
+#products{background:var(--cream)}
+.prod-grid{display:grid;grid-template-columns:.85fr 1.2fr;gap:60px;align-items:center}
+.prod-img{position:relative}
+.prod-img .note{position:absolute;right:-30px;bottom:34px;max-width:280px;padding:20px 24px;border-radius:20px;background:var(--navy);color:#fff;font-size:.92rem;box-shadow:0 24px 50px -10px rgba(15,45,87,.6)}
+.prod-txt p{margin-bottom:18px;color:#324a6b;font-size:1.05rem}
+.cats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
+.cat{position:relative;padding:18px 22px;text-align:center;border-radius:16px;border:2.5px solid var(--navy);background:#fff;font-weight:600;color:var(--navy);overflow:hidden;transition:.5s var(--ease);isolation:isolate}
+.cat::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,var(--navy),var(--blue));transform:translateY(101%);transition:.55s var(--ease)}
+.cat:hover{color:#fff;transform:translateY(-4px)}.cat:hover::before{transform:none}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chips span{padding:6px 14px;border-radius:99px;background:var(--mist);color:var(--blue);font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.fabrics{display:flex;gap:0;margin-top:34px;border-radius:20px;overflow:hidden;height:70px;box-shadow:0 20px 40px -18px rgba(15,45,87,.5)}
+.fabrics i{flex:1;position:relative;transition:flex .7s var(--ease)}
+.fabrics i::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.2) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.12) 0 2px,transparent 2px 6px)}
+.fabrics i:hover{flex:3}
+
+/* production */
+#prod-mgmt{background:linear-gradient(180deg,#143f7a,var(--navy));color:#fff;overflow:hidden;isolation:isolate}
+#prod-mgmt .bgimg{position:absolute;inset:0;z-index:-1;background:url(img/mc-store-racks.jpg) center/cover;opacity:.12}
+.pm-head{text-align:center;max-width:900px;margin:0 auto 60px}
+.pm-head h2{color:#fff}
+.pm-head p{font-size:1.15rem;font-weight:600;color:#e6efff}
+.steps5{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;position:relative}
+.steps5::before{content:"";position:absolute;left:4%;right:4%;top:36px;border-top:3px dashed rgba(255,176,102,.7)}
+.s5{text-align:center;position:relative}
+.s5 .num{width:74px;height:74px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(135deg,var(--orange),#ffb347);display:grid;place-items:center;font-family:Anton;font-size:2rem;box-shadow:0 0 0 8px rgba(255,255,255,.1),0 14px 30px rgba(0,0,0,.35);position:relative;z-index:2;transition:.5s var(--ease)}
+.s5:hover .num{transform:scale(1.12) rotate(-6deg)}
+.s5 .card{border-radius:22px;overflow:hidden;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);height:100%}
+.s5 .card .fold{border-radius:0;aspect-ratio:1/1;clip-path:inset(0 0 94% 0)}
+.s5 .card .fold.in{clip-path:inset(0)}
+.s5 h3{font-size:1.5rem;margin:16px 0 8px;color:#fff}
+.s5 p{padding:0 16px 22px;font-size:.88rem;color:#d3e2f7;line-height:1.55}
+.pm-foot{text-align:center;margin-top:56px;font-family:Anton;text-transform:uppercase;letter-spacing:.05em;font-size:clamp(1.3rem,3vw,2rem)}
+.pm-foot span{color:var(--orange)}
+
+/* qc */
+#qc{background:var(--paper)}
+.qc-top{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.qc-top h2+.sub{font-size:1.4rem;color:var(--navy);font-weight:800}
+.qc-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.qc-photos .ph{aspect-ratio:3/4}.qc-photos .ph:nth-child(2){margin-top:46px}
+.qc8{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px;counter-reset:q}
+.q{position:relative;padding:60px 22px 26px;text-align:center;border-radius:26px;background:#fff;box-shadow:0 16px 40px -18px rgba(15,45,87,.35);transition:.6s var(--ease);overflow:hidden}
+.q:hover{transform:translateY(-10px);box-shadow:0 30px 60px -20px rgba(15,45,87,.5)}
+.q .n{position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:76px;height:76px;border-radius:50%;background:var(--navy);color:#fff;font-family:Anton;font-size:1.9rem;display:grid;place-items:center;padding-top:14px;box-shadow:0 0 0 6px var(--mist)}
+.q svg{width:44px;height:44px;margin:0 auto 12px;stroke:var(--blue);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.q b{display:block;font-family:Anton;font-weight:400;font-size:1.15rem;letter-spacing:.05em;color:var(--navy);text-transform:uppercase}
+.q span{font-size:.82rem;font-weight:600;color:#5a7194;text-transform:uppercase;letter-spacing:.08em}
+.q::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:100%;background:linear-gradient(90deg,var(--orange),var(--blue));transform:scaleX(0);transform-origin:left;transition:.6s var(--ease)}
+.q:hover::after{transform:scaleX(1)}
+.qc-note{margin-top:30px;text-align:center;font-weight:800;font-size:1.2rem;font-family:Anton;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+
+/* quality checks */
+#checks{background:linear-gradient(180deg,var(--mist),#f3f7fd)}
+.chk-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:56px;align-items:center}
+.chk5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px}
+.ck{padding:26px 16px;background:#fff;border-radius:22px;box-shadow:0 14px 34px -16px rgba(15,45,87,.4);text-align:center;transition:.5s var(--ease);position:relative}
+.ck:hover{transform:translateY(-10px) rotate(-1.2deg)}
+.ck .ico{width:64px;height:64px;border-radius:50%;margin:-52px auto 14px;background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 6px var(--mist),0 10px 20px rgba(15,45,87,.3)}
+.ck .ico svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ck .no{font-family:Anton;font-size:2.4rem;color:var(--orange);line-height:1}
+.ck h3{font-size:1.05rem;color:var(--navy);margin:6px 0 8px;letter-spacing:.04em}
+.ck p{font-size:.78rem;line-height:1.5;color:#4b6285}
+.chk5-wrap{padding-top:40px}
+.aql{margin-top:30px;font-size:1.1rem;color:#324a6b;padding:18px 24px;border-radius:18px;background:#fff;border-left:5px solid var(--blue)}
+.chk-photo{aspect-ratio:891/1086}
+
+/* ready */
+#ready{color:#fff;isolation:isolate;overflow:hidden}
+#ready .bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(rgba(7,26,56,.9),rgba(15,45,87,.94)),url(img/stack-white-big.jpg) center/cover fixed}
+.rd-head{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center;margin-bottom:60px}
+.rd-head h2{font-size:clamp(2.8rem,7vw,5.6rem);color:#fff}
+.rd-head h2 em{display:block}
+.rd-head h2 span{color:var(--blue);filter:brightness(1.7)}
+.rd-head p{font-size:1.2rem}.rd-head p b{color:#fff}
+.rd-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.rd{grid-column:span 2;display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);transition:.6s var(--ease)}
+.rd:nth-child(4){grid-column:2/span 2}.rd:nth-child(5){grid-column:4/span 2}
+.rd:hover{transform:translateY(-10px);background:rgba(255,255,255,.14)}
+.rd .fold{border-radius:0;aspect-ratio:16/10;clip-path:inset(0 0 94% 0)}.rd .fold.in{clip-path:inset(0)}
+.rd div.t{padding:22px 24px 26px}
+.rd h3{font-size:1.6rem;color:var(--orange2);margin-bottom:6px}
+.rd p{color:#e2edfc;font-size:.98rem}
+.rd-foot{margin-top:52px;text-align:center;font-size:1.25rem;font-weight:600;color:#fff}
+
+/* process */
+#process{background:var(--paper)}
+.proc-head{text-align:center;margin-bottom:60px}
+.proc-head h2 em{color:var(--orange)}
+.proc-head h2 b{font-weight:400;color:var(--blue)}
+.proc-head i{display:block;font-weight:500;color:#4b6285}
+.proc{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:20px 60px;max-width:1080px;margin:0 auto}
+.proc::before{content:"";position:absolute;left:50%;top:20px;bottom:20px;border-left:3px dashed rgba(31,95,181,.35)}
+.pr{display:flex;align-items:center;gap:0;position:relative;transition:.5s var(--ease)}
+.pr:hover{transform:scale(1.03)}
+.pr .nm{flex:none;width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#3f84e3);color:#fff;font-family:Anton;font-size:2.4rem;display:grid;place-items:center;z-index:2;box-shadow:0 14px 30px -8px rgba(31,95,181,.7)}
+.pr .tx{flex:1;margin-left:-26px;padding:20px 26px 20px 46px;border-radius:0 22px 22px 0;background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;font-size:.98rem;box-shadow:0 18px 40px -16px rgba(15,45,87,.6);min-height:78px;display:flex;align-items:center}
+.pr .tx b{color:#fff;font-weight:800}
+.pr.loop .nm{background:linear-gradient(135deg,var(--orange),#ffb347)}
+.pr.loop .tx{background:linear-gradient(120deg,#d9701a,var(--orange))}
+.proc .col2{grid-column:2}
+.proc-note{text-align:center;margin-top:44px;font-style:italic;font-weight:600;color:#4b6285}
+.loop-arrow{grid-column:1/3;display:flex;justify-content:center}
+
+/* uniform */
+#uniform{background:var(--cream)}
+.un-top{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:34px;align-items:center}
+.un-top .ph{aspect-ratio:465/665}
+.un-mid{text-align:center}
+.un-mid h2{font-size:clamp(3rem,7vw,5.4rem);margin-top:0}
+.un-mid .box{padding:26px 28px;border-radius:22px;background:var(--navy);color:#fff;font-size:1rem;margin-top:26px;box-shadow:0 26px 50px -18px rgba(15,45,87,.6)}
+.un-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+.uc{padding:30px;border-radius:24px;background:#fff;box-shadow:0 20px 44px -22px rgba(15,45,87,.4);position:relative;overflow:hidden;transition:.5s var(--ease)}
+.uc::before{content:"";position:absolute;left:0;top:0;height:6px;width:100%;background:repeating-linear-gradient(90deg,var(--orange) 0 14px,transparent 14px 20px)}
+.uc:hover{transform:translateY(-8px)}
+.uc h3{font-size:1.45rem;color:var(--navy);margin-bottom:12px}
+.uc p{color:#3b5273}
+.un-foot{margin-top:34px;text-align:center;padding:16px 26px;border-radius:99px;background:var(--blue);color:#fff;font-weight:600;max-width:880px;margin-inline:auto}
+
+/* why */
+#why{background:var(--mist);overflow:hidden;isolation:isolate}
+#why .bg{position:absolute;left:0;right:0;bottom:0;height:46%;z-index:-1;background:linear-gradient(var(--mist) 0,rgba(15,45,87,.0) 5%),linear-gradient(rgba(17,60,115,.94),rgba(15,45,87,.97))}
+.why-grid{display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:34px;align-items:start}
+.why-grid p{margin-bottom:18px;color:#2f4768}.why-grid p b{color:var(--navy)}
+.why-mid{text-align:center}
+.why-mid .sub{font-family:Anton;font-weight:400;font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--blue);text-transform:uppercase;line-height:1.15;margin-bottom:22px}
+.tick{display:flex;align-items:center;gap:14px;padding:16px 24px;margin-bottom:12px;border-radius:99px;background:#fff;box-shadow:0 14px 34px -16px rgba(15,45,87,.45);font-weight:700;color:var(--blue);text-align:left;transition:.5s var(--ease)}
+.tick:hover{transform:translateX(10px) scale(1.02)}
+.tick svg{flex:none;width:30px;height:30px;stroke:#2db84d;fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.why-photos{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:70px}
+.why-photos .ph{aspect-ratio:1286/528}
+.why-photos .ph:first-child{aspect-ratio:1222/503}
+.shirts{margin-top:30px;aspect-ratio:21/8}
+
+/* start */
+#start{color:#fff;isolation:isolate;overflow:hidden;padding:130px 0}
+#start .bg{position:absolute;inset:-5%;z-index:-2;background:linear-gradient(100deg,rgba(7,26,56,.88),rgba(7,26,56,.55)),url(img/ship-sea.jpg) center/cover;will-change:transform}
+.start-grid{display:grid;grid-template-columns:.9fr 1.2fr;gap:60px;align-items:center}
+.start-grid h2{color:#fff;font-size:clamp(3rem,7.5vw,6rem)}
+.start-grid .logo{width:200px;margin-bottom:26px}
+.start-grid p.in{font-size:1.15rem;text-align:center;margin-bottom:24px}
+.req{display:grid;gap:12px}
+.req div{padding:16px 26px;border-radius:14px;background:rgba(255,255,255,.94);border:2px solid var(--navy);color:var(--navy);font-weight:600;transition:.5s var(--ease)}
+.req div:hover{transform:translateX(12px);background:var(--orange);border-color:var(--orange);color:#fff}
+.start-foot{margin-top:60px;text-align:center;font-weight:700;font-size:clamp(1rem,2vw,1.3rem)}
+
+/* contact */
+#contact{color:#fff;isolation:isolate;overflow:hidden;padding:130px 0 70px}
+#contact .bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(170deg,rgba(18,63,120,.82),rgba(10,35,71,.97)),url(img/sewing-woman-bg.jpg) center/cover}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+#contact h2{color:#fff;font-size:clamp(2.8rem,6vw,4.8rem);-webkit-text-stroke:0}
+.ct-list{list-style:none;margin-top:30px;display:grid;gap:18px}
+.ct-list li a,.ct-list li div{display:flex;align-items:center;gap:20px;font-weight:700;font-size:1.1rem;padding:14px 20px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);transition:.5s var(--ease)}
+.ct-list li a:hover{background:rgba(242,140,40,.85);transform:translateX(10px)}
+.ct-list svg{flex:none;width:28px;height:28px;stroke:var(--orange2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ct-list a:hover svg{stroke:#fff}
+.thanks{text-align:center}
+.thanks img{width:min(360px,80%);margin:0 auto 14px;animation:float 8s ease-in-out infinite}
+.thanks h3{font-size:clamp(3.6rem,9vw,7rem);color:#fff}
+.legal{margin-top:80px;text-align:center;font-size:.8rem;opacity:.65;letter-spacing:.08em}
+
+/* wave dividers */
+.wave{position:absolute;left:0;width:100%;height:80px;line-height:0;pointer-events:none}
+.wave.top{top:-1px}.wave.bot{bottom:-1px;transform:scaleY(-1)}
+.wave svg{width:200%;height:100%;animation:wv 18s linear infinite}
+@keyframes wv{to{transform:translateX(-50%)}}
+
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:rgba(5,18,40,.9);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:.5s var(--ease);padding:30px}
+#lb.on{opacity:1;pointer-events:auto}
+#lb img{max-height:88vh;border-radius:18px;transform:scale(.92);transition:.6s var(--ease);box-shadow:0 40px 100px rgba(0,0,0,.6)}
+#lb.on img{transform:none}
+
+.totop{position:fixed;right:22px;bottom:22px;z-index:80;width:50px;height:50px;border-radius:50%;border:0;background:var(--orange);color:#fff;cursor:pointer;box-shadow:0 14px 30px rgba(242,140,40,.5);opacity:0;transform:translateY(20px);transition:.5s var(--ease);font-size:1.3rem}
+.totop.on{opacity:1;transform:none}
+
+@media(max-width:1020px){
+  nav ul{position:fixed;inset:0 0 0 auto;width:min(320px,80vw);flex-direction:column;gap:6px;padding:100px 30px;background:rgba(10,35,71,.97);transform:translateX(100%);transition:.6s var(--ease)}
+  nav ul.open{transform:none}nav li a{font-size:.9rem;display:block;padding:12px 0}
+  .burger{display:block;z-index:3}
+  .about-grid,.map-wrap,.found,.ceo-grid,.net-grid,.prod-grid,.qc-top,.chk-grid,.rd-head,.un-top,.why-grid,.start-grid,.ct-grid{grid-template-columns:1fr}
+  .toc-grid{grid-template-columns:1fr}.toc-img{min-height:380px}
+  #ceo{background:linear-gradient(180deg,var(--navy) 0 340px,var(--paper) 340px)}
+  .ceo-photo{max-width:340px;margin:0 auto}
+  .steps5{grid-template-columns:1fr 1fr}.steps5::before{display:none}
+  .qc8{grid-template-columns:repeat(2,1fr)}
+  .chk5{grid-template-columns:repeat(2,1fr);gap:50px 14px}
+  .rd-grid{grid-template-columns:1fr 1fr}.rd,.rd:nth-child(4),.rd:nth-child(5){grid-column:auto}
+  .proc{grid-template-columns:1fr}.proc::before{display:none}.proc .col2{grid-column:auto}.loop-arrow{grid-column:auto}
+  .un-cols{grid-template-columns:1fr}.un-top .ph{aspect-ratio:16/10}
+  .prod-img .note{position:static;margin-top:16px;max-width:none}
+  .mosaic{grid-auto-rows:110px}
+  section{padding:80px 0}
+}
+@media(max-width:560px){
+  .steps5,.qc8,.rd-grid,.cats{grid-template-columns:1fr}
+  .chk5{grid-template-columns:1fr}
+  .mosaic .m{grid-column:span 6!important;grid-row:span 2!important}
+  .pillar .no{display:none}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.fold{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}}
+</style>
+</head>
+<body>
+<div id="thread"></div>
+<div id="glow"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#hero"><img src="img/logo.png" alt="LICA Garment Solutions — Your Complete Garment Partner"></a>
+    <ul id="menu">
+      <li><a href="#about">About the Brand</a></li>
+      <li><a href="#ceo">Brand Values</a></li>
+      <li><a href="#products">Collection</a></li>
+      <li><a href="#network">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact Info</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  </div>
+</nav>
+
+<!-- 01 COVER -->
+<header id="hero" class="weave">
+  <div class="bg" data-speed=".12"></div>
+  <canvas id="silk"></canvas>
+  <svg class="thr" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-40 700C200 560 330 820 560 660S900 380 1100 520 1380 640 1500 480"/>
+    <path d="M-40 250C180 140 400 360 640 230S980 80 1180 220 1400 300 1500 180"/>
+  </svg>
+  <div class="swatch" style="left:6%;top:22%;width:150px;height:190px;background:linear-gradient(135deg,#d96a2b,#f2a65a);--r2:-6deg;transform:rotate(-12deg);animation-delay:-2s"></div>
+  <div class="swatch" style="right:7%;top:18%;width:170px;height:130px;background:linear-gradient(135deg,#2e6bc9,#7fb0f5);--r2:12deg;transform:rotate(9deg);animation-delay:-5s"></div>
+  <div class="swatch" style="right:12%;bottom:16%;width:120px;height:160px;background:linear-gradient(135deg,#e9dcc3,#fff3da);--r2:-4deg;transform:rotate(-8deg);animation-delay:-8s"></div>
+  <div class="swatch" style="left:12%;bottom:14%;width:140px;height:110px;background:linear-gradient(135deg,#8c1f3a,#d4596f);--r2:10deg;transform:rotate(14deg);animation-delay:-11s"></div>
+  <div class="veil"></div>
+  <div class="wrap hero-in">
+    <img class="logo" src="img/logo.png" alt="LICA Garment Solutions">
+    <div class="tag">Textile &amp; Garment Manufacturing · Vietnam</div>
+    <h1><span>Company</span> <span>Profile</span></h1>
+    <p class="mot">Your Complete Garment Partner</p>
+    <a class="cta" href="#about">Explore LICA <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="scroll"></div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>OEM <b>✦</b> ODM <b>✦</b> Fabric sourcing / development <b>✦</b> Custom dyeing <b>✦</b> Printing <b>✦</b> Embroidery <b>✦</b> Labeling <b>✦</b> Hang tag <b>✦</b> Packaging <b>✦</b> Woven &amp; Knit <b>✦</b></span>
+  <span>OEM <b>✦</b> ODM <b>✦</b> Fabric sourcing / development <b>✦</b> Custom dyeing <b>✦</b> Printing <b>✦</b> Embroidery <b>✦</b> Labeling <b>✦</b> Hang tag <b>✦</b> Packaging <b>✦</b> Woven &amp; Knit <b>✦</b></span>
+</div></div>
+
+<!-- 02 TABLE OF CONTENTS -->
+<section id="toc" class="weave">
+  <div class="toc-grid">
+    <div class="toc-img">
+      <img src="img/toc-store.jpg" alt="MC Fashion showroom with colourful garments on racks" loading="lazy">
+      <h2 class="rv"><em style="color:var(--orange)">Table of</em><em>Contents</em></h2>
+    </div>
+    <div class="toc-list">
+      <a href="#about" class="rv"><i>01</i><span>About the Brand</span></a>
+      <a href="#ceo" class="rv" style="--d:.08s"><i>02</i><span>Brand Values</span></a>
+      <a href="#products" class="rv" style="--d:.16s"><i>03</i><span>Collection</span></a>
+      <a href="#network" class="rv" style="--d:.24s"><i>04</i><span>Services</span></a>
+      <a href="#process" class="rv" style="--d:.32s"><i>05</i><span>Process</span></a>
+      <a href="#contact" class="rv" style="--d:.40s"><i>06</i><span>Contact Info</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ABOUT -->
+<section id="about" class="weave-l">
+  <div class="wrap">
+    <span class="eyebrow rv">01 · About the Brand</span>
+    <h2 class="rv">About <em>LICA</em></h2>
+    <div class="about-grid">
+      <div class="stats">
+        <div class="stat tilt rv"><div class="n"><span data-count="13">13</span><sup>+</sup></div><div><b>YEARS</b><span>of continuous fashion operations</span></div></div>
+        <div class="stat tilt rv" style="--d:.12s"><div class="n"><span data-count="300">300</span><sup>+</sup></div><div><b>STORES</b><span>developed across Vietnam</span></div></div>
+        <div class="stat tilt rv" style="--d:.24s"><div class="n"><span data-count="2" data-suffix="M">2M</span><sup>+</sup></div><div><b>CUSTOMER</b><span>served through the network</span></div></div>
+      </div>
+      <div class="about-copy">
+        <p class="intro rv"><em>LICA Garment Solutions</em> is a Vietnam-based OEM and ODM garment manufacturing partner</p>
+        <p class="rv" style="--d:.1s">That experience informs how we evaluate materials, fit, product cost and production choices. We bring a practical understanding of the decisions that affect <strong>customer satisfaction and commercial performance.</strong></p>
+        <p class="rv" style="--d:.2s">Through a managed network of specialized manufacturing partners, we connect <strong>product development, production management and independent quality control</strong>. We work as an extension of your team in Vietnam, helping you turn a product brief into a <strong>well-managed production program.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04-05 OUR STORY -->
+<section id="story">
+  <div class="wave top"><svg viewBox="0 0 2880 80" preserveAspectRatio="none"><path fill="#fbf9f5" d="M0 0h2880v30c-240 40-480 40-720 0s-480-40-720 0-480 40-720 0S240 70 0 30z" transform="translate(0 0)"/></svg></div>
+  <div class="wrap">
+    <div class="story-top">
+      <span class="eyebrow rv">Our Story</span>
+      <h2 class="rv">Our <em>Story</em></h2>
+      <p class="big rv">Our story began in 2013 with <b>MC Fashion, a Vietnamese women’s officewear brand.</b></p>
+      <h3 class="rv">Growing a fashion brand to <em>300+</em> stores.</h3>
+    </div>
+    <div class="map-wrap">
+      <div class="map-card tilt rv"><img src="img/map-stores.png" alt="Map of Vietnam showing MC Fashion stores in Hà Nội, Hải Phòng, Hà Tĩnh, Thanh Hóa, Đà Nẵng, Cần Thơ, TP. Hồ Chí Minh and Đà Lạt" loading="lazy"></div>
+      <div class="story-copy rv" style="--d:.15s">
+        <p>Building a fashion brand taught us to understand a garment beyond its appearance. We learned how <strong>each production decision can affect a business.</strong> That understanding comes from years of developing products, managing production and listening to the people who wear them.</p>
+        <div class="cities">
+          <span>MC FASHION – Hà Nội</span><span>MC FASHION – Hải Phòng</span><span>MC FASHION – Hà Tĩnh</span><span>MC FASHION – Thanh Hóa</span><span>MC FASHION – Đà Nẵng</span><span>MC FASHION – Cần Thơ</span><span>MC FASHION – TP. Hồ Chí Minh</span><span>MC FASHION – Đà Lạt</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="found">
+      <div>
+        <span class="eyebrow rv">Our Story</span>
+        <h2 class="rv">Our <em>Story</em></h2>
+        <p class="plain rv"><strong>LICA Garment Solutions was born from this foundation,</strong> bringing together more than a decade of experience, an established team and trusted manufacturing relationships.</p>
+      </div>
+      <div class="mosaic">
+        <div class="m fold ph" data-lb><img src="img/story-qc.jpg" alt="LICA Control Quality inspection team" loading="lazy"><div class="cap">Our purpose is to bring a brand owner's commercial mindset to garment manufacturing in Vietnam.</div></div>
+        <div class="m fold ph" style="--d:.15s" data-lb><img src="img/story-meeting.jpg" alt="Team meeting with an overseas client on screen" loading="lazy"><div class="cap">Through our OEM and ODM services, we handle the entire production process on behalf of the client and turn those decisions into production that supports their business goals.</div></div>
+        <div class="m fold ph" style="--d:.3s" data-lb><img src="img/story-sewing.jpg" alt="Seamstress at an industrial sewing machine" loading="lazy"><div class="cap">Wherever you are on your fashion journey - developing your first collection, expanding your product range or growing an established business - we are here to move forward with you.</div></div>
+        <div class="m fold ph" style="--d:.45s" data-lb><img src="img/story-floor.jpg" alt="Factory sewing floor" loading="lazy"><div class="cap">We understand the care, ambition and responsibility behind every step, because we have walked that path ourselves.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CEO LETTER -->
+<section id="ceo">
+  <div class="wrap ceo-grid">
+    <div class="ceo-photo tilt rv"><img src="img/ceo.jpg" alt="Khaly Dao, Founder &amp; CEO of LICA Garment Solutions" loading="lazy"></div>
+    <div class="letter">
+      <span class="eyebrow rv">02 · Brand Values</span>
+      <h2 class="rv">CEO <em>Letter</em></h2>
+      <div class="hl rv">Beyond manufacturing. Powered by retail experience.</div>
+      <p class="rv"><b>Dear Partners,</b></p>
+      <p class="rv">Building <b><i>MC Fashion</i></b> taught us to see a garment through the eyes of the business selling it and the person wearing it. More than 13 years of brand development and a retail network of over 300 stores across Vietnam have shown us how decisions about quantity, fabric, price, quality and timing affect a fashion business and the success of each product sold.</p>
+      <p class="rv">We bring that perspective to <b>LICA</b>. We ask what a product needs to achieve, where cost can be improved without weakening its value, and which manufacturing partner is best suited to deliver it.</p>
+      <p class="rv">Our role continues through development, production and quality control. We make requirements clear, keep progress visible and address issues with our partners as they arise.</p>
+      <p class="rv">We look forward to understanding your next project and building a production partnership that supports your business over time.</p>
+      <div class="sign rv">Khaly Dao</div>
+      <div class="sign-t rv">Founder &amp; CEO<br>LICA Garment Solutions</div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 SPECIALIZED MANUFACTURING NETWORK -->
+<section id="network" class="weave-l">
+  <div class="wrap">
+    <span class="eyebrow rv">04 · Services</span>
+    <h2 class="rv">Specialized <em>Manufacturing</em> Network</h2>
+    <p class="sub rv">THE RIGHT FACTORY FOR EACH PRODUCT</p>
+    <p class="lead rv" style="margin-bottom:46px;font-weight:700;color:var(--navy)">Behind LICA's manufacturing network is <span style="color:var(--orange)">over a decade</span> of working together</p>
+    <div class="net-grid">
+      <div>
+        <div class="net-lead rv">For more than a decade, LICA’s team has worked with selected garment factories to produce for our own fashion brand. These long-standing relationships have grown into formal manufacturing partnerships that now serve our international clients.</div>
+        <div class="pillars">
+          <div class="pillar rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12l5-3 4 2 4-2 5 3"/><path d="M7 9l4 6 3-2 3 3"/><path d="M5 16l3 3 3-1 2 1 4-3"/></svg></div><p><b>Carefully selected partners with proven experience</b> producing for our brand</p><div class="no">01</div></div>
+          <div class="pillar rv" style="--d:.08s"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div><p><b>Specialized capabilities</b> to match each product with the right factory</p><div class="no">02</div></div>
+          <div class="pillar rv" style="--d:.16s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 4V9l6 4V5h3v16z"/><path d="M7 17h2M12 17h2M17 17h1"/></svg></div><p><b>Flexible production capacity</b> for different categories and order volumes</p><div class="no">03</div></div>
+          <div class="pillar rv" style="--d:.24s"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><p><b>Hands-on oversight</b> from sampling and production to quality control</p><div class="no">04</div></div>
+        </div>
+      </div>
+      <div class="net-txt rv" style="--d:.15s">
+        <p>We know our manufacturing partners through the work we have done together. That experience helps us move with confidence and take responsibility for every project we deliver.</p>
+        <div class="crit">Factory selection considers <b>category experience, construction, machinery, quality discipline, order volume, available capacity and buyer requirements</b>. LICA remains responsible for product development, production management and independent quality oversight within the agreed scope.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 CERTIFICATIONS -->
+<section id="cert">
+  <div class="bg"></div>
+  <div class="wrap light" style="text-align:center">
+    <span class="eyebrow rv">Trusted Standards</span>
+    <h2 class="rv">Certifications</h2>
+    <div class="box tilt rv"><img src="img/certifications.jpg" alt="Certifications: ISO 9001:2015, Global Security Verification, SA 8000, WRAP, GOTS, BetterWork, Global Recycled Standard, FSC C188782, Organic 100 content standard, Organic Blended content standard, OEKO-TEX Standard 100, OEKO-TEX STeP" loading="lazy"></div>
+    <div class="ctags rv">
+      <span>ISO 9001:2015</span><span>Global Security Verification</span><span>SA 8000</span><span>WRAP</span><span>GOTS</span><span>BetterWork</span><span>Global Recycled Standard</span><span>FSC® C188782</span><span>Organic 100 Content Standard</span><span>Organic Blended Content Standard</span><span>OEKO-TEX® Standard 100</span><span>OEKO-TEX® STeP — Sustainable Textile &amp; Leather Production</span>
+    </div>
+  </div>
+</section>
+
+<!-- 09 PRODUCT CATEGORIES -->
+<section id="products" class="weave-l">
+  <div class="wrap">
+    <span class="eyebrow rv">03 · Collection</span>
+    <div class="prod-grid">
+      <div class="prod-img rv">
+        <div class="fold ph" data-lb style="aspect-ratio:622/732"><img src="img/product-photo.jpg" alt="Hands attaching hang tags to garments on a tagging machine" loading="lazy"></div>
+        <div class="note">Capability is confirmed for each project based on material, construction, machinery, volume, buyer requirements and available capacity.</div>
+      </div>
+      <div class="prod-txt">
+        <h2 class="rv">Product <em>Categories</em></h2>
+        <p class="sub rv">PRODUCT CAPABILITY MATCHED TO SPECIALIST MANUFACTURING</p>
+        <p class="rv" style="margin-top:14px">We are proud to be one of textile manufacturers in Vietnam specializing in OEM, FOB production, transforming your unique ideas into reality with full customization options such as fabric sourcing/ development, custom dyeing, printing, embroidery, labeling, hang tag and packaging.</p>
+        <p class="rv">With a keen focus on both woven and knit apparels in premium quality, our versatility spans the spectrum from sporty activewear to chic fashion wear and comfortable underwear. From staying updated on the latest trends to optimizing production processes, we’re committed to adding value at every stage.</p>
+        <div class="chips rv"><span>Fabric sourcing / development</span><span>Custom dyeing</span><span>Printing</span><span>Embroidery</span><span>Labeling</span><span>Hang tag</span><span>Packaging</span></div>
+        <div class="cats">
+          <div class="cat rv">Outerwear</div><div class="cat rv" style="--d:.05s">Under wear</div>
+          <div class="cat rv" style="--d:.1s">Active wear</div><div class="cat rv" style="--d:.15s">Kidswear</div>
+          <div class="cat rv" style="--d:.2s">Seamless line</div><div class="cat rv" style="--d:.25s">Workwear/Uniform</div>
+          <div class="cat rv" style="--d:.3s">Casual &amp; Fashion wear</div>
+        </div>
+        <div class="fabrics rv" aria-hidden="true"><i style="background:#0f2d57"></i><i style="background:#1f5fb5"></i><i style="background:#f28c28"></i><i style="background:#e9dcc3"></i><i style="background:#8c1f3a"></i><i style="background:#2f6b4f"></i><i style="background:#2b2b33"></i><i style="background:#f4b7c5"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 PRODUCTION MANAGEMENT -->
+<section id="prod-mgmt" class="weave">
+  <div class="bgimg"></div>
+  <div class="wrap">
+    <div class="pm-head">
+      <span class="eyebrow rv">Services</span>
+      <h2 class="rv">Production Management <em>and</em> Responsibility</h2>
+      <p class="rv">LICA manages the agreed production plan, follows milestones and raises issues that need action. Buyers receive a clear point of contact throughout the order.</p>
+    </div>
+    <div class="steps5">
+      <div class="s5 rv"><div class="num">1</div><div class="card"><div class="fold ph" data-lb><img src="img/meeting.jpg" alt="Planning meeting" loading="lazy"></div><h3>Planning</h3><p>align materials, capacity, approval dates and delivery milestones.</p></div></div>
+      <div class="s5 rv" style="--d:.1s"><div class="num">2</div><div class="card"><div class="fold ph" data-lb><img src="img/qc-team.jpg" alt="Pre-production inspection team" loading="lazy"></div><h3>Pre-production</h3><p>confirm the approved sample, measurements, workmanship and packing.</p></div></div>
+      <div class="s5 rv" style="--d:.2s"><div class="num">3</div><div class="card"><div class="fold ph" data-lb><img src="img/embroidery-line.jpg" alt="Row of industrial embroidery machines" loading="lazy"></div><h3>Progress</h3><p>monitor output and communicate delays or deviations early.</p></div></div>
+      <div class="s5 rv" style="--d:.3s"><div class="num">4</div><div class="card"><div class="fold ph" data-lb><img src="img/cutting-fabric.jpg" alt="Team reviewing and cutting white fabric" loading="lazy"></div><h3>Change control</h3><p>document revisions and confirm their cost and timing impact.</p></div></div>
+      <div class="s5 rv" style="--d:.4s"><div class="num">5</div><div class="card"><div class="fold ph" data-lb><img src="img/packed-white.jpg" alt="Stacks of packed finished garments" loading="lazy"></div><h3>Completion</h3><p>follow quality actions through to closure and prepare the order for shipment.</p></div></div>
+    </div>
+    <p class="pm-foot rv">Defined responsibilities <span>reduce the coordination burden</span> on your team.</p>
+  </div>
+</section>
+
+<!-- 11 INDEPENDENT QC -->
+<section id="qc">
+  <div class="wrap">
+    <div class="qc-top">
+      <div>
+        <span class="eyebrow rv">Quality</span>
+        <h2 class="rv">Independent <em>Quality</em> Control</h2>
+        <p class="sub rv">No compromise</p>
+        <p class="lead rv" style="margin-top:12px">LICA's quality oversight complements the factory's own checks. We review production against the buyer's approved standards and follow corrective actions through to closure.</p>
+      </div>
+      <div class="qc-photos">
+        <div class="fold ph" data-lb><img src="img/sewing-dark.jpg" alt="Sewing dark fabric on an industrial machine" loading="lazy"></div>
+        <div class="fold ph" style="--d:.2s" data-lb><img src="img/stack-white.jpg" alt="Stacked finished white garments" loading="lazy"></div>
+      </div>
+    </div>
+    <h2 class="rv" style="text-align:center;margin-top:90px;color:var(--blue)">Garment <em>QC</em> Procedures</h2>
+    <div class="qc8" style="margin-top:70px">
+<div class="q rv" style="--d:0.00s"><div class="n">01</div><svg viewBox="0 0 24 24"><rect x="3" y="7" width="12" height="10" rx="5"/><path d="M15 12h6M8 7v10"/></svg><b>Fabric</b><span>Inspection</span></div>
+<div class="q rv" ><div class="n">02</div><svg viewBox="0 0 24 24"><path d="M8 3l-5 3 2 4 2-1v11h10V9l2 1 2-4-5-3c0 2-2 3-4 3S8 5 8 3z"/></svg><b>Semi Product</b><span>Inspection</span></div>
+<div class="q rv" ><div class="n">03</div><svg viewBox="0 0 24 24"><circle cx="9" cy="6" r="2.5"/><path d="M4 21v-5l4-3 4 2h6M10 14v7M3 21h18"/></svg><b>Self-Worker</b><span>Inspection</span></div>
+<div class="q rv" ><div class="n">04</div><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><b>In-Line</b><span>Inspection</span></div>
+<div class="q rv" ><div class="n">05</div><svg viewBox="0 0 24 24"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"/><path d="M12 11V20M3 6.5l9 4.5 9-4.5"/></svg><b>Output</b><span>Inspection</span></div>
+<div class="q rv" ><div class="n">06</div><svg viewBox="0 0 24 24"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"/><path d="M12 11V20M3 6.5l9 4.5 9-4.5M16 17l2 2 3-3"/></svg><b>Packing &amp; Finishing</b><span>Inspection</span></div>
+<div class="q rv" ><div class="n">07</div><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M8.5 11l1.5 1.5L13 9.5M8.5 17l1.5 1.5 3-3"/></svg><b>Final</b><span>Inspection</span></div>
+<div class="q rv" style="--d:0.24s"><div class="n">08</div><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13l2 2 4-4"/></svg><b>Order Completion</b><span>Inspection &amp; Report</span></div>
+    </div>
+    <p class="qc-note rv">No compromise</p>
+  </div>
+</section>
+
+<!-- 12 QUALITY CHECKS -->
+<section id="checks">
+  <div class="wrap chk-grid">
+    <div>
+      <span class="eyebrow rv">Quality</span>
+      <h2 class="rv">Quality Checks <em style="display:block;font-size:.62em;color:var(--navy)">at the stages that matter</em></h2>
+      <div class="chk5-wrap">
+      <div class="chk5">
+        <div class="ck rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M9 11h6M9 15h6"/></svg></div><div class="no">01</div><h3>PRE-PRODUCTION</h3><p>Approved sample, measurements, workmanship and packing standards.</p></div>
+        <div class="ck rv" style="--d:.08s"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3" stroke-dasharray="2 2"/><rect x="7" y="7" width="10" height="10" rx="1.5"/></svg></div><div class="no">02</div><h3>MATERIALS</h3><p>Fabrics, trims, color and agreed testing requirements.</p></div>
+        <div class="ck rv" style="--d:.16s"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9h6l2 2h4v9M10 9V5h3M8 14h6"/></svg></div><div class="no">03</div><h3>IN-LINE</h3><p>Construction, measurements, workmanship and issue correction.</p></div>
+        <div class="ck rv" style="--d:.24s"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 3l-5 3 2 4 2-1v11h10V9l2 1 2-4-5-3c0 2-2 3-4 3S8 5 8 3z"/><circle cx="12" cy="14" r="2.4"/></svg></div><div class="no">04</div><h3>FINAL</h3><p>Quantity, appearance, measurements, labels and packing.</p></div>
+        <div class="ck rv" style="--d:.32s"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></svg></div><div class="no">05</div><h3>DOCUMENTATION</h3><p>Inspection records, photographs and corrective-action status.</p></div>
+      </div></div>
+      <p class="aql rv">Inspection methods and AQL, where applicable, are agreed with the buyer before bulk production.</p>
+    </div>
+    <div class="chk-photo fold ph" data-lb><img src="img/inspect-woman.jpg" alt="LICA quality inspector checking a garment beside a sewing line" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 13 READY FOR YOUR MARKET -->
+<section id="ready">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="rd-head">
+      <h2 class="rv">Ready for <em style="color:var(--orange)">your market</em><em>and your next step</em></h2>
+      <p class="rv"><b>Sewing completion</b> is not the end of the product journey. LICA follows the <b>final details</b> that prepare the order for the buyer's warehouse, retail network, customer or distribution channel.</p>
+    </div>
+    <div class="rd-grid">
+      <div class="rd rv"><div class="fold" data-lb><img src="img/brand-design.jpg" alt="Designers reviewing brand colour swatches" loading="lazy"></div><div class="t"><h3>Brand execution</h3><p>labels, trims, embroidery and printing approvals.</p></div></div>
+      <div class="rd rv" style="--d:.1s"><div class="fold" data-lb><img src="img/sizes-folded.jpg" alt="Folded garments with colour-coded size tags" loading="lazy"></div><div class="t"><h3>Requirements</h3><p>Size and color assortment, folding, individual packing and carton</p></div></div>
+      <div class="rd rv" style="--d:.2s"><div class="fold" data-lb><img src="img/finishing-team.jpg" alt="Team presenting finishing standards" loading="lazy"></div><div class="t"><h3>Finishing and presentation</h3><p>aligned with the approved product standard.</p></div></div>
+      <div class="rd rv"><div class="fold" data-lb><img src="img/truck-load.jpg" alt="Truck loaded with cartons ready for shipment" loading="lazy"></div><div class="t"><h3>Preparation</h3><p>Packing lists, carton marks and shipment, within the agreed scope.</p></div></div>
+      <div class="rd rv" style="--d:.1s"><div class="fold" data-lb><img src="img/order-record.jpg" alt="Order record on a screen beside binders" loading="lazy"></div><div class="t"><h3>Order records</h3><p>retained to support replenishment and future review</p></div></div>
+    </div>
+    <p class="rd-foot rv">The order is ready when the product and its information can move cleanly into your operation.</p>
+  </div>
+</section>
+
+<!-- 14 PROCESS -->
+<section id="process" class="weave-l">
+  <div class="wrap">
+    <div class="proc-head">
+      <span class="eyebrow rv">05 · Process</span>
+      <h2 class="rv"><em>OEM</em> <b>and</b> <em>ODM</em> Collaboration Process</h2>
+      <i class="rv">* Key approvals are documented before the next stage begins.</i>
+    </div>
+    <div class="proc">
+      <div class="pr rv"><div class="nm">1</div><div class="tx"><span><b>Understand the brief:</b> product, market, target price and timeline</span></div></div>
+      <div class="pr rv col2" style="--d:.05s"><div class="nm">5</div><div class="tx"><span><b>Produce and control:</b> progress tracking, inspections and corrective actions.</span></div></div>
+      <div class="pr rv" style="--d:.1s"><div class="nm">2</div><div class="tx"><span><b>Confirm feasibility:</b> materials, factory fit, costing and scope.</span></div></div>
+      <div class="pr rv col2" style="--d:.15s"><div class="nm">6</div><div class="tx"><span><b>Prepare shipment:</b> packing, final checks and document coordination.</span></div></div>
+      <div class="pr rv" style="--d:.2s"><div class="nm">3</div><div class="tx"><span><b>Develop and approve:</b> samples, revisions and production standards</span></div></div>
+      <div class="pr rv col2" style="--d:.25s"><div class="nm">7</div><div class="tx"><span><b>Review and repeat:</b> feedback, specification updates and replenishment planning.</span></div></div>
+      <div class="pr rv" style="--d:.3s"><div class="nm">4</div><div class="tx"><span><b>Plan production:</b> materials, capacity and key approval dates.</span></div></div>
+      <div class="pr loop rv col2" style="--d:.35s"><div class="nm">1</div><div class="tx"><span><b>Understand the brief</b></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 MC FASHION UNIFORM -->
+<section id="uniform">
+  <div class="wrap">
+    <div class="un-top">
+      <div class="fold ph" data-lb><img src="img/mc-storefront.jpg" alt="MC Fashion storefront — Phong cách phụ nữ hiện đại" loading="lazy"></div>
+      <div class="un-mid rv">
+        <img src="img/logo.png" alt="" style="width:170px;margin:0 auto 16px;filter:brightness(0) saturate(100%) invert(15%) sepia(60%) saturate(1800%) hue-rotate(195deg)" aria-hidden="true">
+        <h2>MC Fashion <em>Uniform</em></h2>
+        <div class="box">As a complementary offering, LICA supplies MC Fashion office uniforms to businesses and works with distributors and agents. Product selection, availability and cooperation terms are discussed for each program.</div>
+      </div>
+      <div class="fold ph" style="--d:.2s" data-lb><img src="img/mc-interior.jpg" alt="MC Fashion store interior with warm lighting and garments" loading="lazy"></div>
+    </div>
+    <div class="un-cols">
+      <div class="uc rv"><h3>For Businesses &amp; Schools</h3><p>discuss garment selection, size requirements, quantity and delivery planning.</p></div>
+      <div class="uc rv" style="--d:.1s"><h3>For Distributors and Agents</h3><p>review the uniform range and agree a cooperation scope for the target market.</p></div>
+      <div class="uc rv" style="--d:.2s"><h3>For Repeat Requirements</h3><p>confirm product availability, size consistency and replenishment arrangements.</p></div>
+    </div>
+    <p class="un-foot rv">Range, availability, branding options and commercial terms are confirmed by program.</p>
+  </div>
+</section>
+
+<!-- 16 WHY CHOOSE LICA -->
+<section id="why">
+  <div class="bg"></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Why LICA</span>
+    <h2 class="rv">Why Choose <em>LICA</em></h2>
+    <div class="why-grid">
+      <div class="rv">
+        <p>Most manufacturers focus on making garments. LICA manages <b>the entire journey required to turn an idea into a market-ready product.</b></p>
+        <p>Acting as your external product development and production team in Vietnam, we take responsibility for coordinating every critical stage from <b>product development to quality control and shipment coordination.</b></p>
+        <p>But our value goes beyond managing a checklist. LICA approaches production with the mindset of a <b>fashion business.</b></p>
+        <p>At every stage, we consider not only how the garment should be made, but also:</p>
+      </div>
+      <div class="why-mid">
+        <div class="sub rv">One partner. Every production role.<br>Commercial thinking beyond manufacturing.</div>
+        <div class="tick rv"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg>Who will buy and wear the product</div>
+        <div class="tick rv" style="--d:.07s"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg>What value the customer should experience</div>
+        <div class="tick rv" style="--d:.14s"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg>Which details must be protected</div>
+        <div class="tick rv" style="--d:.21s"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg>Where cost can be optimized</div>
+        <div class="tick rv" style="--d:.28s"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg>How quality, timing and consistency affect commercial performance</div>
+      </div>
+      <div class="rv" style="--d:.15s">
+        <p>Buyers do not have to coordinate multiple suppliers, factories and quality teams independently.</p>
+        <p>You work with <b>one accountable partner</b> that connects product development, production, quality, delivery and commercial objectives into one complete solution.</p>
+      </div>
+    </div>
+    <div class="why-photos">
+      <div class="fold ph" data-lb><img src="img/embroidery-wide.jpg" alt="Long line of multi-head embroidery machines" loading="lazy"></div>
+      <div class="fold ph" style="--d:.2s" data-lb><img src="img/factory-floor.jpg" alt="Wide view of a garment sewing floor" loading="lazy"></div>
+    </div>
+    <div class="fold ph shirts" data-lb><img src="img/shirts-hangers.jpg" alt="Cream-coloured shirts on wooden hangers" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 17 START THE CONVERSATION -->
+<section id="start">
+  <div class="bg" data-speed=".1"></div>
+  <div class="wrap">
+    <div class="start-grid">
+      <div class="rv">
+        <img class="logo" src="img/logo.png" alt="LICA Garment Solutions">
+        <h2>Start the conversation with what you have</h2>
+      </div>
+      <div class="rv" style="--d:.15s">
+        <p class="in">A tech pack, a reference sample, a sketch or a product idea can all be a useful starting point. Share the information available and the business conditions the product must meet.</p>
+        <div class="req">
+          <div>Product category, intended customer and use.</div>
+          <div>Reference, sketch, tech pack or current sample</div>
+          <div>Target quality level and price context.</div>
+          <div>Estimated quantity, timing and delivery destination.</div>
+          <div>Branding, packing, testing or compliance requirements.</div>
+        </div>
+      </div>
+    </div>
+    <p class="start-foot rv">LICA will review the brief, identify the information still required and recommend a practical next step.</p>
+  </div>
+</section>
+
+<!-- 18 CONTACT -->
+<section id="contact">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="ct-grid">
+      <div>
+        <span class="eyebrow rv">06 · Contact Info</span>
+        <h2 class="rv">Contact Information</h2>
+        <ul class="ct-list">
+          <li class="rv"><a href="tel:+84942226487"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>+84 94 222 6487</a></li>
+          <li class="rv" style="--d:.08s"><a href="mailto:info@licagarment.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@licagarment.com</a></li>
+          <li class="rv" style="--d:.16s"><a href="https://licagarment.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><u>licagarment.com</u></a></li>
+          <li class="rv" style="--d:.24s"><div><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Dong Anh Village, Dong Anh Commune, Hanoi, Vietnam</div></li>
+        </ul>
+      </div>
+      <div class="thanks rv" style="--d:.2s">
+        <img src="img/logo.png" alt="LICA Garment Solutions — Your Complete Garment Partner">
+        <h3>Thank You</h3>
+      </div>
+    </div>
+    <p class="legal">© LICA Garment Solutions — Your Complete Garment Partner</p>
+  </div>
+</section>
+
+<button class="totop" id="totop" aria-label="Back to top">↑</button>
+<div id="lb"><img alt=""></div>
+
+<script>
+(()=>{
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* nav + progress + parallax */
+const nav=$('#nav'),thread=$('#thread'),top=$('#totop');
+const par=$$('[data-speed]');
+function onScroll(){
+  const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  thread.style.width=(y/h*100)+'%';
+  nav.classList.toggle('stuck',y>40);top.classList.toggle('on',y>900);
+  if(!reduce)par.forEach(e=>{const r=e.parentElement.getBoundingClientRect();if(r.bottom>-200&&r.top<innerHeight+200)e.style.transform=`translate3d(0,${(-r.top*e.dataset.speed).toFixed(1)}px,0)`});
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const burger=$('#burger'),menu=$('#menu');
+burger.onclick=()=>{burger.classList.toggle('x');menu.classList.toggle('open')};
+$$('#menu a').forEach(a=>a.onclick=()=>{burger.classList.remove('x');menu.classList.remove('open')});
+
+/* active link */
+const links=$$('#menu a'),secs=links.map(a=>$(a.getAttribute('href')));
+secs.forEach(s=>s&&new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe(s));
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.02,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.fold').forEach(e=>io.observe(e));
+
+/* counters */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);
+  const el=e.target,to=+el.dataset.count,suf=el.dataset.suffix||'',t0=performance.now(),d=1800;
+  (function f(t){const p=Math.min(1,(t-t0)/d),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=v+suf;if(p<1)requestAnimationFrame(f)})(t0)}),{threshold:.6});
+$$('[data-count]').forEach(e=>cio.observe(e));
+
+/* tilt */
+if(!reduce&&matchMedia('(hover:hover)').matches){
+  $$('.tilt').forEach(c=>{
+    c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*9}deg) rotateX(${-y*9}deg) translateZ(6px)`;c.style.transitionDuration='.12s'});
+    c.addEventListener('mouseleave',()=>{c.style.transform='';c.style.transitionDuration='.6s'});
+  });
+  const g=$('#glow');let gx=innerWidth/2,gy=innerHeight/2,tx=gx,ty=gy;
+  addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY},{passive:true});
+  (function loop(){gx+=(tx-gx)*.08;gy+=(ty-gy)*.08;g.style.transform=`translate(${gx}px,${gy}px)`;requestAnimationFrame(loop)})();
+}else $('#glow').style.display='none';
+
+/* lightbox */
+const lb=$('#lb'),lbi=$('img',lb);
+$$('[data-lb]').forEach(f=>f.addEventListener('click',()=>{const i=$('img',f);lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on')}));
+lb.onclick=()=>lb.classList.remove('on');addEventListener('keydown',e=>e.key==='Escape'&&lb.classList.remove('on'));
+
+/* silk canvas */
+const cv=$('#silk'),cx=cv.getContext('2d');let W,H,mx=.5,my=.5,sx=.5,sy=.5,vis=true;
+function size(){const d=Math.min(devicePixelRatio||1,2);W=cv.width=cv.offsetWidth*d;H=cv.height=cv.offsetHeight*d}
+size();addEventListener('resize',size);
+$('#hero').addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect();mx=(e.clientX-r.left)/r.width;my=(e.clientY-r.top)/r.height});
+new IntersectionObserver(es=>vis=es[0].isIntersecting).observe($('#hero'));
+const bands=[
+ {c:['rgba(242,140,40,.0)','rgba(242,140,40,.38)','rgba(255,190,120,.0)'],y:.62,a:.11,f:1.3,s:.00045,w:.2},
+ {c:['rgba(31,95,181,.0)','rgba(90,150,235,.45)','rgba(31,95,181,.0)'],y:.5,a:.14,f:.9,s:-.0004,w:.26},
+ {c:['rgba(255,255,255,.0)','rgba(255,255,255,.22)','rgba(255,255,255,.0)'],y:.72,a:.09,f:1.7,s:.0006,w:.14},
+ {c:['rgba(15,45,87,.0)','rgba(120,170,245,.3)','rgba(15,45,87,.0)'],y:.38,a:.12,f:1.1,s:-.00055,w:.22},
+ {c:['rgba(242,140,40,.0)','rgba(255,160,70,.26)','rgba(242,140,40,.0)'],y:.82,a:.08,f:2.1,s:.0005,w:.16}
+];
+function draw(t){
+  requestAnimationFrame(draw);if(!vis)return;
+  sx+=(mx-sx)*.04;sy+=(my-sy)*.04;cx.clearRect(0,0,W,H);
+  bands.forEach((b,i)=>{
+    const g=cx.createLinearGradient(0,0,0,H);
+    const top=b.y-b.w/2,bot=b.y+b.w/2;
+    cx.beginPath();const N=70;
+    const yy=(x)=>{const u=x/W;return H*(b.y+(sy-.5)*.08*(i+1)/3)+Math.sin(u*Math.PI*2*b.f+t*b.s*6+i)*H*b.a*(1+(sx-.5)*.8)+Math.sin(u*Math.PI*5*b.f-t*b.s*9)*H*b.a*.25};
+    for(let k=0;k<=N;k++){const x=W*k/N,y=yy(x)-H*b.w/2;k?cx.lineTo(x,y):cx.moveTo(x,y)}
+    for(let k=N;k>=0;k--){const x=W*k/N,y=yy(x)+H*b.w/2;cx.lineTo(x,y)}
+    cx.closePath();
+    const gr=cx.createLinearGradient(0,H*(b.y-b.a-b.w),0,H*(b.y+b.a+b.w));
+    gr.addColorStop(0,b.c[0]);gr.addColorStop(.5,b.c[1]);gr.addColorStop(1,b.c[2]);
+    cx.fillStyle=gr;cx.fill();
+    /* fine threads */
+    cx.strokeStyle='rgba(255,255,255,.07)';cx.lineWidth=1;
+    for(let j=-3;j<=3;j++){cx.beginPath();for(let k=0;k<=N;k++){const x=W*k/N,y=yy(x)+j*H*b.w/7;k?cx.lineTo(x,y):cx.moveTo(x,y)}cx.stroke()}
+  });
+}
+if(!reduce)requestAnimationFrame(draw);else{size();}
+})();
+</script>
+</body>
+</html>
